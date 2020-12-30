@@ -36,8 +36,16 @@
         </el-table-column>
         <el-table-column  label="操作" width="80" >
           <template slot-scope="page" >
-            <el-button size="small" type="text" @click="edit(page.row.pageId)">
+            <el-button size="small"  @click="edit(page.row.pageId)">
               编辑</el-button>
+            <el-button size="small" @click="del(page.row.pageId)">
+              删除</el-button>
+            <el-button @click="preview(page.row.pageId)" type="text" size="small">
+            页面预览
+          </el-button>
+           <el-button size="small" type="primary" plain @click="postPage(page.row.pageId)">
+             发布
+           </el-button>
           </template>
         </el-table-column>
       </el-table>
@@ -90,11 +98,14 @@
         // alert(page)
         this.params.page = page;
         this.query()
-      },
+      },//页面预览
       edit:function(pageId){
         //打开修改页面
         this.$router.push({
-          path:'/cms/page/edit/'+pageId
+          path:'/cms/page/edit/'+pageId,query:{
+              page:this.params.page,
+              siteId:this.params.siteId
+          }
         })
       },
       del:function (pageId) {
@@ -111,8 +122,37 @@
             }
           })
         })
-
+      },
+      preview:function(pageId){
+        window.open("http://www.xuecheng.com/cms/preview/"+pageId)
+      },
+      postPage (id) {
+          this.$confirm('确认发布该页面吗?', '提示', { }).then
+          (() =>
+          {
+              cmsApi.page_postPage(id).then
+              (
+              (res) =>
+              {
+                if(res.success){
+                  console.log('发布页面id='+id);
+                  this.$message.success('发布成功，请稍后查看结果');
+                 }
+                  else{
+                    this.$message.error('发布失败');
+                  }
+              }
+              );
+          }
+          ).catch(
+              () => {}
+              );
       }
+    },
+    created(){
+      //取出路由中的参数，赋值给数据对象
+      this.params.page = Number.parseInt(this.$route.query.page || 1)
+      this.params.siteId = this.$route.query.siteId || ''
     },
     mounted(){
       //当DOM元素渲染完成后调用query
@@ -121,9 +161,6 @@
     }
   }
 </script>
-
-
 <style scoped>
-    /*  scoped 组件的局部作用域 */
-
+    /*  scoped 组件的局部作用域 *
 </style>

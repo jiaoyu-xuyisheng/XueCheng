@@ -86,7 +86,7 @@
         this.$router.push({ path: '/course/manager/'+id})
       }
 
-    },
+  },
     created(){
 
     },

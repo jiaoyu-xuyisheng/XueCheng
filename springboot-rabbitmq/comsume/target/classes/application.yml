@@ -1,0 +1,11 @@
+server:
+  port: 44000
+spring:
+  application:
+    name: springboot-rabbitmq-comsume
+  rabbitmq:
+    host: 23.234.54.106
+    port: 5672
+    username: guest
+    password: guest
+    virtual-host: /

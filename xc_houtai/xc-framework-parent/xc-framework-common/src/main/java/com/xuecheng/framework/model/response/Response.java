@@ -1,7 +1,7 @@
 package com.xuecheng.framework.model.response;
 
 /**
- * Created by admin on 2018/3/5.
+ * 响应接口
  */
 public interface Response {
     public static final boolean SUCCESS = true;

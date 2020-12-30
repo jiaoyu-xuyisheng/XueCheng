@@ -56,7 +56,7 @@
       </el-form>
     </el-dialog>
     <el-dialog title="选择媒资文件" :visible.sync="mediaFormVisible">
-      <media-list v-bind:ischoose="true" @choosemedia="choosemedia"></media-list>
+      <media-list  v-bind:ischoose="true" @choosemedia="choosemedia"></media-list>
     </el-dialog>
   </div>
 </template>
@@ -181,10 +181,8 @@
       },
       renderContent(h, { node, data, store }) {
         return (
-          <span style="flex: 1; display: flex; align-items: center; justify-content: space-between; font-size: 14px; padding-right: 8px;">
-            <span>
-              <span>{node.label}</span>
-            </span>
+            <span style="flex: 1; display: flex; align-items: center; justify-content: space-between; font-size: 14px; padding-right: 8px;">
+            <span><span>{node.label}</span></span>
             <span>
               <el-button style="font-size: 12px;" type="text" on-click={ () => this.choosevideo(data) }>{data.mediaFileOriginalName}&nbsp;&nbsp;&nbsp;&nbsp; 选择视频</el-button>
               <el-button style="font-size: 12px;" type="text" on-click={ () => this.edit(data) }>修改</el-button>
@@ -199,8 +197,6 @@
             if(res && res.children){
               this.teachplanList = res.children;
             }
-
-
         })
       }
     },
@@ -208,8 +204,7 @@
       //课程id
       this.courseid = this.$route.params.courseid;
       //查询课程计划
-      // this.findTeachplan()
-
+      this.findTeachplan()
     }
   }
 </script>

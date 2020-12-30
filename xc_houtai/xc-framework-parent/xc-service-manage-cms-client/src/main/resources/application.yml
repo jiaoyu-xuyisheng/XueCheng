@@ -5,7 +5,7 @@ spring:
     name: xc-service-manage-cms-client
   data:
     mongodb:
-      uri:  mongodb://root:123@localhost:27017
+      uri:  mongodb://root:897570@localhost:27017
       database: xc_cms
   rabbitmq:
     host: 127.0.0.1
@@ -18,3 +18,13 @@ xuecheng:
     #cms客户端监控的队列名称（不同的客户端监控的队列不能重复）
     queue: queue_cms_postpage_01
     routingKey: 5a751fab6abb5044e0d19ea1	#此routingKey为门户站点ID
+eureka:
+  client:
+    registerWithEureka: true #服务注册，是否将自己注册到Eureka服务中
+    fetchRegistry: true #服务发现，是否从Eureka中获取注册信息
+    serviceUrl: #Eureka客户端与Eureka服务端的交互地址，高可用状态配置对方的地址，单机状态配置自己（如果不配置则默认本机8761端口）
+      defaultZone: ${EUREKA_SERVER:http://localhost:50101/eureka/,http://localhost:50102/eureka/}
+  instance:
+    prefer-ip-address: true #将自己的ip地址注册到eureka服务中
+    ip-address: ${IP_ADDRESS:127.0.0.1}
+    instance-id: ${spring.application.name}:${server.port} #指寂静实例ID

@@ -2,33 +2,55 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="xc-service-manage-course" />
+        <module name="xc-framework-common" />
+        <module name="xc-framework-model" />
+        <module name="untitled1" />
         <module name="xc-framework-utils" />
         <module name="xc-service-manager-cms" />
-        <module name="xc-framework-model" />
+        <module name="xc-service-manage-cms-client" />
         <module name="xc-service-api" />
-        <module name="xc-framework-common" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="8">
+      <module name="rabbitmqclient" target="1.8" />
+      <module name="untitled1" target="1.8" />
+      <module name="xc-client-rabbitmq" target="1.8" />
+      <module name="xc-cms-client" target="1.8" />
+      <module name="xc-cms-myclient" target="1.8" />
+      <module name="xc-cms-service-client" target="1.8" />
       <module name="xc-framework-common" target="1.8" />
       <module name="xc-framework-model" target="1.8" />
       <module name="xc-framework-parent" target="1.8" />
       <module name="xc-framework-utils" target="1.8" />
+      <module name="xc-rabbitmq-client" target="1.8" />
       <module name="xc-service-api" target="1.8" />
+      <module name="xc-service-manage-cms-client" target="1.8" />
+      <module name="xc-service-manage-course" target="1.8" />
       <module name="xc-service-manager-cms" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="rabbitmqclient" options="-parameters" />
+      <module name="untitled1" options="-parameters" />
+      <module name="xc-client-rabbitmq" options="-parameters" />
+      <module name="xc-cms-client" options="-parameters" />
+      <module name="xc-cms-myclient" options="-parameters" />
+      <module name="xc-cms-service-client" options="-parameters" />
       <module name="xc-framework-common" options="-parameters" />
       <module name="xc-framework-model" options="-parameters" />
       <module name="xc-framework-parent" options="" />
       <module name="xc-framework-utils" options="-parameters" />
+      <module name="xc-rabbitmq-client" options="-parameters" />
       <module name="xc-service-api" options="-parameters" />
+      <module name="xc-service-manage-cms-client" options="-parameters" />
+      <module name="xc-service-manage-course" options="-parameters" />
       <module name="xc-service-manager-cms" options="-parameters" />
     </option>
   </component>

@@ -3,15 +3,16 @@ package com.xuecheng.framework.model.response;
 import lombok.ToString;
 
 /**
- * @Author: mrt.
+ * @Author: Xu YiSheng
  * @Description:
- * @Date:Created in 2018/1/24 18:33.
- * @Modified By:
+ * @Date:Created in 2020/5/17
+ * 状态码返回
  */
 
 @ToString
 public enum CommonCode implements ResultCode{
 
+    INVALID_PARAM(false,10003,"非法参数"),
     SUCCESS(true,10000,"操作成功！"),
     FAIL(false,11111,"操作失败！"),
     UNAUTHENTICATED(false,10001,"此操作需要登陆系统！"),

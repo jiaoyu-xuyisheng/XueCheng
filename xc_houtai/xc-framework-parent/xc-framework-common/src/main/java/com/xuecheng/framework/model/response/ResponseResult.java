@@ -7,7 +7,7 @@ import lombok.ToString;
 /**
  * @Author: mrt.
  * @Description:
- * @Date:Created in 2018/1/24 18:33.
+ * 响应结果
  * @Modified By:
  */
 @Data

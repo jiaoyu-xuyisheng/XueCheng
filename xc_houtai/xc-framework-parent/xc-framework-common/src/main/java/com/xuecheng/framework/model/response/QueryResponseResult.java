@@ -3,6 +3,9 @@ package com.xuecheng.framework.model.response;
 import lombok.Data;
 import lombok.ToString;
 
+/**
+ * 响应结果
+ */
 @Data
 @ToString
 public class QueryResponseResult extends ResponseResult {

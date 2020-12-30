@@ -58,3 +58,6 @@ export const findCourseView = courseId => {
 export const savemedia = teachplanMedia => {
   return http.requestPost(apiUrl+'/course/savemedia',teachplanMedia);
 }
+
+
+

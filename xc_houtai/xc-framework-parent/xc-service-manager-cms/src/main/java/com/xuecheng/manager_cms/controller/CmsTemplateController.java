@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 模板管理
+ */
 @RestController
 @RequestMapping("/cms/template")
 public class CmsTemplateController implements CmsTemplateControllerApi {

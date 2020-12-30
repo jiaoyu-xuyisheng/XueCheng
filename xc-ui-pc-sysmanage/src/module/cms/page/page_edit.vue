@@ -47,6 +47,10 @@
       <el-form-item label="创建时间">
         <el-date-picker type="datetime" placeholder="创建时间" v-model="pageForm.pageCreateTime"></el-date-picker>
       </el-form-item>
+      <el-form-item label="数据Url" prop="dataUrl">
+        <el-input v‐model="pageForm.dataUrl" auto‐complete="off" >
+      </el-input>
+    </el-form-item>
 
     </el-form>
     <div slot="footer" class="dialog-footer">

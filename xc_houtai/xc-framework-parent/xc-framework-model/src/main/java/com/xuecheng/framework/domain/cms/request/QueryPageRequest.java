@@ -5,6 +5,9 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 
+/**
+ * 发送数据
+ */
 @Data
 public class QueryPageRequest extends RequestData {
 

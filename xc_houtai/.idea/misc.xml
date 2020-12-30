@@ -4,11 +4,24 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/xc-framework-parent/pom.xml" />
-        <option value="$PROJECT_DIR$/xc-framework-parent/xc-framework-common/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-framework-parent/xc-service-manage-cms-client/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-framework-parent/xc-service-manage-course/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/xc-framework-parent/rabbitmq-client/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-framework-parent/untitled1/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-framework-parent/xc-client-rabbitmq/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-framework-parent/xc-cms-client/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-framework-parent/xc-cms-myclient/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-framework-parent/xc-cms-rabbitmq-client/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-framework-parent/xc-cms-service-client/pom.xml" />
+        <option value="$PROJECT_DIR$/xc-framework-parent/xc-rabbitmq-client2/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_12" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

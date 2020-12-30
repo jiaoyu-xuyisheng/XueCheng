@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * 站点管理
+ */
 @RestController
 @RequestMapping("/cms/site")
 public class CmsSiteController implements CmsSiteControllerApi {
